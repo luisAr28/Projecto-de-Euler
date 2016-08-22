@@ -41,3 +41,13 @@ h1,p {
 #encabezado_profesores{
 	padding-left: 20px;
 }
+
+.link_profesor{
+	text-decoration: none;
+	color: white;
+}
+
+.link_profesor:hover{
+	text-decoration: none;
+	color: white;
+}

@@ -38,20 +38,20 @@
   <!-- Page Content -->
   <div class="container">
       <div class="row">
-          <div class="col-md-5 col-sm-12 col-xs-12">
-            <h1 class="encabezado" id="encabezado_profesores"><span>Profesores</span></h1>
+          <div class="col-md-6 col-sm-12">
+            <h1 class="encabezado" id="encabezado_profesores"><span>Profesor</span></h1>
 
 
           </div>
-          <div class="col-md-1 col-sm-1 col-xs-1"></div>
-          <div class="col-md-5 col-sm-10 col-xs-10 lista_profesores">
-            <?php foreach ($profesores as $profesor): ?>
-                    <h3 class="nombre_profesor"><?php echo $profesor['Nombre']; ?></h3>
-                    <a class="link_profesor"href="<?php echo site_url('profesores/'.$profesor['Nombre']); ?>">Informacion</a>
-                    <hr>
-            <?php endforeach; ?>
+          <div class="col-md-1 col-sm-2 col-xs-2"></div>
+          <div class="col-md-4 col-sm-8 col-xs-8 lista_profesores">
+            <h3 class="nombre_profesor"><?php echo $profesor['Nombre']; ?></h3>
+            <h5 class="nombre_profesor"><?php echo $profesor['ApPaterno']; ?></h5>
+            <h5 class="nombre_profesor"><?php echo $profesor['ApMaterno']; ?></h5>
+              <h5 class="nombre_profesor"><?php echo $profesor['email']; ?></h5>
+            <hr>
           </div>
-          <div class="col-md-1 col-sm-1 col-xs-1"></div>
+          <div class="col-md-1 col-sm-2 col-xs-2"></div>
       </div>
       <!-- /.row -->
   </div>
