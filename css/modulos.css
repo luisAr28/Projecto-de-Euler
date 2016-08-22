@@ -2,12 +2,6 @@
 
 /*Pagina principal*/
 
-/*!
- * Start Bootstrap - The Big Picture (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */
-
 body {
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -23,4 +17,27 @@ h1,p {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+/*!
+ * Start Bootstrap - The Big Picture (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+ /*
+		Modulo de profesores
+ */
+.lista_profesores{
+	margin-top: 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+.nombre_profesor{
+	color: white;
+	text-transform: uppercase;
+	font-weight: 200;
+	letter-spacing: 0.2em;
+}
+#encabezado_profesores{
+	padding-left: 20px;
 }

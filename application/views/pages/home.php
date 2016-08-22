@@ -39,6 +39,9 @@
                         <a href="#">Alumnos</a>
                     </li>
                     <li>
+                        <a href="index.php/profesores/index">Profesores</a>
+                    </li>
+                    <li>
                         <a href="#">Contancto</a>
                     </li>
                 </ul>
