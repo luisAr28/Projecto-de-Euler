@@ -39,7 +39,7 @@
   <div class="container">
       <div class="row">
           <div class="col-md-5 col-sm-12 col-xs-12">
-            <h1 class="encabezado" id="encabezado_profesores"><span>Ver Universidades</span></h1>
+            <h1 class="encabezado" id="encabezado_profesores"><span>Ver Paises</span></h1>
           </div>
           <div class="col-md-1 col-sm-1 col-xs-1"></div>
 
@@ -53,13 +53,17 @@
                 </tr>
               </thead>
               <tbody>
+                <a href="#"></a>
                 <?php
                 //Encontrar el numero de universidades en cada pais. Pendiente :/
 
-                  foreach ($universidades as $universidad) {
+                  foreach ($paises as $pais) {
                     echo "<tr>";
-                        echo "<td>";
-                        echo $universidad['Escuela'];
+                      echo '<td>';
+                      ?>
+                      <a href="<?php echo site_url('alumnos/ver_universidad/'.$pais['idPais']); ?>">
+                      <?php
+                        echo $pais['Pais']; echo "</a>";
                       echo "</td>";
                     echo "</tr>";
                   }
@@ -72,5 +76,26 @@
       <!-- /.row -->
   </div>
   <!-- /.container -->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>

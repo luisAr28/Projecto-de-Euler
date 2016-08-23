@@ -15,10 +15,17 @@ class Alumnos extends CI_Controller{
     $this->load->view('footer');
   }
 
-  public function ver_universidades(){
+  public function ver_universidades($universidad = NULL){
     $data['paises'] = $this->alumnos_model->get_paises();
-    $data['universidades'] = $this->alumnos_model->get_universidades();
 
+    $this->load->view('header');
+    $this->load->view('alumnos/ver_paises',$data);
+    $this->load->view('footer');
+  }
+
+  public function ver_universidad($idPais)
+  {
+    $data['universidades'] = $this->alumnos_model->get_universidades($idPais);
     $this->load->view('header');
     $this->load->view('alumnos/ver_universidades',$data);
     $this->load->view('footer');

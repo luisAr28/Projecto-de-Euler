@@ -7,9 +7,10 @@ class Alumnos_model extends CI_Model{
       $this->load->database();
   }
 
-  public function get_universidades()
+  public function get_universidades($idPais)
   {
-    $query = $this->db->get('escuela');
+    $sql = "SELECT * FROM escuela WHERE idPais = ?";
+    $query = $this->db->query($sql, array($idPais));
     return $query->result_array();
   }
 
