@@ -30,4 +30,17 @@ class Alumnos extends CI_Controller{
     $this->load->view('alumnos/ver_universidades',$data);
     $this->load->view('footer');
   }
+
+  public function ver_materias($idEscuela)
+  {
+    $data['materias'] = $this->alumnos_model->get_materias($idEscuela);
+    $this->load->view('header');
+    $this->load->view('alumnos/ver_materias',$data);
+    $this->load->view('footer');
+  }
+
+  public function inscribir_materia($idAlumno)
+  {
+    echo "ver materias";
+  }
 }

@@ -39,7 +39,7 @@
   <div class="container">
       <div class="row">
           <div class="col-md-5 col-sm-12 col-xs-12">
-            <h1 class="encabezado" id="encabezado_profesores"><span>Ver Universidades</span></h1>
+            <h1 class="encabezado" id="encabezado_profesores"><span>Ver Materias</span></h1>
           </div>
           <div class="col-md-1 col-sm-1 col-xs-1"></div>
 
@@ -48,7 +48,7 @@
               <thead>
                 <tr>
                   <th>
-                    Universidades
+                    Materias
                   </th>
                 </tr>
               </thead>
@@ -56,16 +56,13 @@
                 <?php
                 //Encontrar el numero de universidades en cada pais. Pendiente :/
 
-                  foreach ($universidades as $universidad) {
+                  foreach ($materias as $materia) {
                     echo "<tr>";
-                        echo "<td>";?>
-
-
-                      <a href="<?php echo site_url('alumnos/ver_materias/'.$universidad['idEscuela']); ?>">
-                        <?php echo $universidad['Escuela'] ?>
-                      </a>
-                      
-                      <?php
+                        echo "<td>";
+                        echo $materia['asignatura'];
+                ?>
+                        <span class="badge inscribir">Inscribir</span>
+                <?php
                       echo "</td>";
                     echo "</tr>";
                   }

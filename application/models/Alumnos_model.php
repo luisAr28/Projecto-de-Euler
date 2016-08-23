@@ -20,4 +20,12 @@ class Alumnos_model extends CI_Model{
     return $query->result_array();
   }
 
+  public function get_materias($idEscuela)
+  {
+    $sql = "SELECT a.asignatura FROM asignatura a, asignaturaescuela ae WHERE
+    ae.idEscuela = ? AND ae.idAsignatura = a.idAsignatura";
+    $query = $this->db->query($sql, array($idEscuela));
+    return $query->result_array();
+  }
+
 }
