@@ -1,0 +1,12 @@
+.encabezado {
+  letter-spacing: 10px;
+  text-transform: uppercase;
+}
+.encabezado span{
+  display: inline-block;
+  padding: 0.2em 0.2em;
+  border: white solid 6px;
+}
+br{
+  color: white;
+}
