@@ -54,3 +54,4 @@ $route['news'] = 'news';
 $route['(:any)'] = 'pages/view/$1';
 $route['default_controller'] = 'pages/view';
 $route['alumnos']='alumnos';
+$route['alumnos/ver_universidades']='alumnos/ver_universidades';
