@@ -48,7 +48,7 @@
               <thead>
                 <tr>
                   <th>
-                    Universidades
+                    Paises
                   </th>
                 </tr>
               </thead>

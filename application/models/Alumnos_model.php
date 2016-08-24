@@ -22,9 +22,36 @@ class Alumnos_model extends CI_Model{
 
   public function get_materias($idEscuela)
   {
-    $sql = "SELECT a.asignatura FROM asignatura a, asignaturaescuela ae WHERE
+    $sql = "SELECT a.asignatura,a.idAsignatura FROM asignatura a, asignaturaescuela ae WHERE
     ae.idEscuela = ? AND ae.idAsignatura = a.idAsignatura";
     $query = $this->db->query($sql, array($idEscuela));
+    return $query->result_array();
+  }
+
+  public function iniciar_sesion()
+  {
+       $email = $this->input->post('email');
+       $password = $this->input->post('password');
+
+       $sql = "SELECT * FROM alumno WHERE email = ? AND password = ? LIMIT 1";
+       $query = $this->db->query($sql, array($email,$password));
+       return $query->row();
+  }
+
+  public function agregar_materia($idAsignatura,$idAlumno)
+  {
+    $data = array(
+      'idAlumno' => $idAlumno,
+      'idAsignatura' => $idAsignatura);
+
+  return $this->db->insert('alumnoasignatura', $data);
+  }
+
+  public function get_inscritas($idAlumno)
+  {
+    $sql = "SELECT a.asignatura FROM asignatura a, alumnoasignatura aa WHERE
+    aa.idAlumno = ? AND aa.idAsignatura = a.idAsignatura";
+    $query = $this->db->query($sql, array($idAlumno));
     return $query->result_array();
   }
 

@@ -39,12 +39,26 @@
   <div class="container">
       <div class="row">
           <div class="col-md-5 col-sm-12 col-xs-12">
-            <h1 class="encabezado" id="encabezado_profesores"><span>Alumnos</span></h1>
+            <h1 class="encabezado" id="encabezado_profesores"><span>Iniciar Sesion</span></h1>
           </div>
           <div class="col-md-1 col-sm-1 col-xs-1"></div>
 
           <div class="col-md-5 col-sm-10 col-xs-10 lista_profesores">
 
+
+            <?php echo validation_errors(); ?>
+
+            <?php echo form_open('alumnos/iniciar_sesion'); ?>
+
+                <label for="email">Email</label>
+                <input type="input" name="email" /><br />
+
+                <label for="password">Password</label>
+                <input type="input" name="password" /><br />
+
+                <input type="submit" name="submit" value="Iniciar Sesion" />
+
+            </form>
           </div>
           <div class="col-md-1 col-sm-1 col-xs-1"></div>
       </div>
