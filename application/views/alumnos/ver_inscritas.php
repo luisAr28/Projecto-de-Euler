@@ -60,6 +60,17 @@
                     echo "<tr>";
                         echo "<td>";
                         echo $inscrita['asignatura'];
+                        ?>
+                        <span class="badge inscribir">
+
+                        <a href="<?php echo site_url('alumnos/eliminar_inscritas/'.$inscrita['idAsignatura']); ?>">
+                        Eliminar</a>
+
+                        </span>
+
+
+
+                        <?php
                       echo "</td>";
                     echo "</tr>";
                   }

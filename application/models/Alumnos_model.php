@@ -49,10 +49,17 @@ class Alumnos_model extends CI_Model{
 
   public function get_inscritas($idAlumno)
   {
-    $sql = "SELECT a.asignatura FROM asignatura a, alumnoasignatura aa WHERE
+    $sql = "SELECT a.asignatura,a.idAsignatura FROM asignatura a, alumnoasignatura aa WHERE
     aa.idAlumno = ? AND aa.idAsignatura = a.idAsignatura";
     $query = $this->db->query($sql, array($idAlumno));
     return $query->result_array();
+  }
+
+  public function eliminar_inscritas($idAsignatura,$idAlumno)
+  {
+    $sql = "DELETE FROM alumnoasignatura WHERE
+    idAlumno = ? AND idAsignatura = ?";
+    $query = $this->db->query($sql, array($idAlumno,$idAsignatura));
   }
 
 }

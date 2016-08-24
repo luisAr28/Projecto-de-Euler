@@ -61,3 +61,4 @@ $route['alumnos/ver_materias/(:num)']='alumnos/ver_materias/$1';
 
 $route['alumnos/inscribir_materia/(:num)']='alumnos/inscribir_materia/$1';
 $route['alumnos/ver_inscritas']='alumnos/ver_inscritas';
+$route['alumnos/eliminar_inscritas']='alumnos/eliminar_inscritas';

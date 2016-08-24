@@ -80,6 +80,13 @@ class Alumnos extends CI_Controller{
     redirect('/alumnos/ver_inscritas');
   }
 
+  public function eliminar_inscritas($idAsignatura)
+  {
+    $this->alumnos_model->eliminar_inscritas($idAsignatura,$this->session->idAlumno);
+    redirect('/alumnos/ver_inscritas');
+  }
+
+
   public function ver_inscritas()
   {
     $data['inscritas'] = $this->alumnos_model->get_inscritas($this->session->idAlumno);
