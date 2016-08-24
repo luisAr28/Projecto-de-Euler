@@ -78,5 +78,20 @@ tbody{
 }
 
 .inscribir{
-	text-align: right;
+	color: white;
+}
+
+.inscribir:hover{
+	color: white;
+	text-decoration: none;
+}
+
+.label_form{
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+
+}
+.btn_form{
+	margin-bottom: 20px;
 }

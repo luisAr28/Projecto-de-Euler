@@ -63,7 +63,7 @@
                         ?>
                         <span class="badge inscribir">
 
-                        <a href="<?php echo site_url('alumnos/eliminar_inscritas/'.$inscrita['idAsignatura']); ?>">
+                        <a class="inscribir" href="<?php echo site_url('alumnos/eliminar_inscritas/'.$inscrita['idAsignatura']); ?>">
                         Eliminar</a>
 
                         </span>

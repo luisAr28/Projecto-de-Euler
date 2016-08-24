@@ -61,9 +61,9 @@
                         echo "<td>";
                         echo $materia['asignatura'];
                 ?>
-                        <span class="badge inscribir">
+                        <span class="badge">
 
-                        <a href="<?php echo site_url('alumnos/inscribir_materia/'.$materia['idAsignatura']); ?>">
+                        <a  class="inscribir" href="<?php echo site_url('alumnos/inscribir_materia/'.$materia['idAsignatura']); ?>">
                         Inscribir</a>
 
                         </span>

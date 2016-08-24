@@ -50,13 +50,17 @@
 
             <?php echo form_open('alumnos/iniciar_sesion'); ?>
 
-                <label for="email">Email</label>
-                <input type="input" name="email" /><br />
+                <div class="form-group">
+                  <label class="label_form" for="email">Email</label>
+                  <input type="input" class="form-control" name="email" /><br />
+                </div>
 
-                <label for="password">Password</label>
-                <input type="input" name="password" /><br />
+                <div class="form-group">
+                  <label class="label_form" for="password">Password</label>
+                  <input type="input" class="form-control" name="password" /><br />
+                </div>
 
-                <input type="submit" name="submit" value="Iniciar Sesion" />
+                <input type="submit" class="btn btn-primary btn_form" name="submit" value="Iniciar Sesion" />
 
             </form>
           </div>
