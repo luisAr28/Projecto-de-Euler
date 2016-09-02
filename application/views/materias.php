@@ -3,13 +3,13 @@
 	<title><?=$page_title?></title>
 	</head>
 	<body>
-		<form name="tabla" action="http://localhost/Projecto-de-Euler/Profesor_controller/buscaDis" method="POST">
+		<form name="tabla" action="" method="POST">
 		<table border="solid">
 		<thead>
 		<tr>
 		
+			<th>Id</th>
 			<th>Materia</th>
-			<th>Ocupabilidad</th>
 		</tr>
 		</thead>
 		<tbody>
@@ -17,15 +17,16 @@
 		
 		<tr>
 		
+		<td><?=$u->idAsignatura?></td>
 		<td><?=$u->asignatura?></td>
-		<td><?=$u->Ocupabilidad?></td>
 		</tr>
 		
 		<?php endforeach;?>
 		</tbody>
 		</table>
-		<input type="submit" value="Editar"/>
+
 		</form>
+
 			
 	</body>
 </html>

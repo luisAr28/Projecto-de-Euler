@@ -18,5 +18,31 @@
 			
 			$this->load->view('ProfesorV',$data);
 		}
+        
+        public function buscaDis()
+		{
+			$this->load->model('Profesor');/*modelo*/
+			
+			$data['page_title']="Ocupabilidad";
+			
+			$usuarios = $this->Profesor->obtenerOcupabilidad();
+			
+			$data['usuarios']=$usuarios;
+			
+			$this->load->view('ProfesorV',$data);
+		}
+        
+        public function buscaTuto()
+		{
+			$this->load->model('Profesor');/*modelo*/
+			
+			$data['page_title']="Tutorados";
+			
+			$usuarios = $this->Profesor->obtenerTutorados();
+			
+			$data['usuarios']=$usuarios;
+			
+			$this->load->view('Profesor_tutorados',$data);
+		}
 	}
 ?>
